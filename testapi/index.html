@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestApi</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <section>
+        <h1>
+            what does your name shows your personality
+        </h1>
+        <div class="centerdiv">
+            <div class="details">
+                <label>
+                    Enter Your Name
+                </label><br>
+
+                <input type="text" name="nametext" id="id1">
+            </div>
+            <div class="img.div">
+                <img src="way.png" width="200" height="200" id="imgchange">
+            </div>
+            <button>
+                Click Me
+            </button>
+        </div>
+    </section>
+
+   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+   <script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const nam = $('#id1').val();
+            alert(nam);
+            $('#imgchange').attr('src','https://joesch.moe/api/v1/male/random/${nam}');//'https://i.pravatar.cc/300/${nam}');
+
+        });
+    });
+   </script>
+</body>
+</html>
